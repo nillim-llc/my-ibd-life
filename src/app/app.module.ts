@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { AppComponent } from './app.component';
         AppRoutingModule,
         AngularFireModule.initializeApp(environment.firebase, environment.firebase.projectId),
         AngularFirestoreModule,
-        AngularFireStorageModule
+        AngularFireStorageModule,
+        CoreModule,
     ],
     providers: [{ provide: FirestoreSettingsToken, useValue: {} }], // SET To silence error.
     bootstrap: [AppComponent]
