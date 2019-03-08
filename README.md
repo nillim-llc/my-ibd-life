@@ -3,7 +3,7 @@
 
 Custom built Frontend that pulls in from the CMS's AngularFirestore/API
 
-Built with Angular 7, Firebase (AngularFire 4), Bootstrap 4, ngx-bootstrap and Angular Material Design.
+Built with Angular 7, Firebase (AngularFire 4), Bootstrap 4
 
 **To Use:**
 
