@@ -1,27 +1,102 @@
-# MyIbdLife
+![MyIBDLife](https://firebasestorage.googleapis.com/v0/b/my-ibd-life-dev.appspot.com/o/images%2F2019%2F1551821388572_my_ibd_life_logo_500.png?alt=media&token=7fe237dc-fe29-42fc-8031-210e0db40b52)
+# CMS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+Custom built CMS
 
-## Development server
+Built with Angular 7, Firebase (AngularFire 4), Bootstrap 4, ngx-bootstrap and Angular Material Design.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**To Use:**
 
-## Code scaffolding
+Open up your terminal and clone the project:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    git clone git@github.com:AmerGastroAssn/my-ibd-life-cms.git
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Rename project to whatever you want:
 
-## Running unit tests
+    mv my-ibd-life-cms new-project-name
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+Change/Move into project directory:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    cd new-project-name
 
-## Further help
+Delete Git Files:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+	rm -rf ~/.git
+
+Reinstall Git:
+
+	git init
+
+
+
+Install dependencies:
+
+    npm install
+
+Create environment files:
+
+`/src/environments/environment.prod.ts`
+
+and
+
+`/src/environments/environment.ts`
+
+By running:
+
+
+    mkdir src/environments && touch src/environments/environment.prod.ts && touch src/environments/environment.ts
+
+
+Add your firebase web-app variables to those files:
+
+It should be something like this (with your own values):
+
+```typescript
+export const environment = {
+    production: false, // false for regular folder, true for .prod folder
+    firebase: {
+        apiKey: 'key',
+        authDomain: 'app-name.firebaseapp.com',
+        databaseURL: 'https://app-name.firebaseio.com',
+        projectId: 'app-name',
+        storageBucket: 'app-name.appspot.com',
+        messagingSenderId: 'senderIDNumber'
+    }
+};
+```
+
+Change Logos in:
+
+`logo-watermark.component.ts`
+
+`sidenav-component.ts`
+
+
+**Setup/install Firebase Function dependencies**
+
+Install the [Firebase command line tools](https://firebase.google.com/docs/cli/). It will walk you through a handful of questions. ([Follow instructions](https://firebase.google.com/docs/cli/) and/or search [youtube](https://www.youtube.com/watch?v=9kRgVxULbag) for more info to do that):
+
+    npm install -g firebase-tools
+
+Change directory into Firebase functions to install those dependencies:
+
+    cd functions
+
+Install Firebase Functions dependencies:
+
+    npm install
+
+Back out to main working directory:
+
+    cd ..
+
+Start Angular Server:
+
+    ng serve
+
+Open browser to [http://localhost:4200](http://localhost:4200)
+
+
+
