@@ -100,3 +100,4 @@ Open browser to [http://localhost:4200](http://localhost:4200)
 
 
 
+![Angular](https://angular.io/assets/images/logos/angular/angular.png)
