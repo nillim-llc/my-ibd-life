@@ -1,5 +1,5 @@
 ![MyIBDLife](https://firebasestorage.googleapis.com/v0/b/my-ibd-life-dev.appspot.com/o/images%2F2019%2F1551821388572_my_ibd_life_logo_500.png?alt=media&token=7fe237dc-fe29-42fc-8031-210e0db40b52)
-# CMS
+# Frontend
 
 Custom built CMS
 
