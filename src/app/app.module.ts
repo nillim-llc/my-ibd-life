@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CategoryModule } from './category/category.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CoreModule } from './core/core.module';
         AngularFirestoreModule,
         AngularFireStorageModule,
         CoreModule,
+        CategoryModule,
     ],
     providers: [{ provide: FirestoreSettingsToken, useValue: {} }], // SET To silence error.
     bootstrap: [AppComponent]

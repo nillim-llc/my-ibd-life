@@ -1,0 +1,11 @@
+.row.footer-top {
+    background-color: var(--midnight);
+    color: var(--cloud);
+    padding: 5rem;
+}
+
+.row.footer-bottom {
+    background-color: var(--matt-blue);
+    color: var(--cloud);
+    padding: 2rem;
+}
