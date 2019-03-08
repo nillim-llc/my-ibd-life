@@ -1,7 +1,7 @@
 ![MyIBDLife](https://firebasestorage.googleapis.com/v0/b/my-ibd-life-dev.appspot.com/o/images%2F2019%2F1551821388572_my_ibd_life_logo_500.png?alt=media&token=7fe237dc-fe29-42fc-8031-210e0db40b52)
 # Frontend
 
-Custom built CMS
+Custom built Frontend that pulls in from the CMS's AngularFirestore/API
 
 Built with Angular 7, Firebase (AngularFire 4), Bootstrap 4, ngx-bootstrap and Angular Material Design.
 
@@ -9,12 +9,12 @@ Built with Angular 7, Firebase (AngularFire 4), Bootstrap 4, ngx-bootstrap and A
 
 Open up your terminal and clone the project:
 
-    git clone git@github.com:AmerGastroAssn/my-ibd-life-cms.git
+    git clone git@github.com:AmerGastroAssn/my-ibd-life.git
 
 
 Rename project to whatever you want:
 
-    mv my-ibd-life-cms new-project-name
+    mv my-ibd-life new-project-name
 
 
 Change/Move into project directory:
