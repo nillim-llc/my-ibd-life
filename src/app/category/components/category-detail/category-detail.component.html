@@ -1,0 +1,14 @@
+<!-- * CATEGORY-DETAIL * -->
+<div class="container cat-detail" *ngIf="category">
+    <div class="row">
+        <div class="col-md-3 icon-img">
+            <i [className]="category.imageUrl"></i>
+        </div>
+        <div class="col-md-9">
+            <h1 class="title">{{ category.name }}</h1>
+            <p class="body">
+                {{ category.body }}
+            </p>
+        </div>
+    </div>
+</div>

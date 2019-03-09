@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
-    { path: '', loadChildren: './page/page.module#PageModule' },
+    { path: '', loadChildren: './category/category.module#CategoryModule' },
+    { path: 'pages', loadChildren: './page/page.module#PageModule' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

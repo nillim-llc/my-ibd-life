@@ -5,7 +5,7 @@ import { PageComponent } from './components/page.component';
 
 const routes: Routes = [
     {
-        path: '', component: PageComponent, children: [
+        path: 'pages', component: PageComponent, children: [
             { path: ':id', component: PageDetailComponent }
         ]
     }

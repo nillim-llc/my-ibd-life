@@ -3,7 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Category } from '../models/Category';
+import { Category } from '../models/category';
 
 @Injectable({
     providedIn: 'root'
@@ -36,15 +36,15 @@ export class CategoryService {
         return this.categories$ = this.categoryCollection.valueChanges();
     }
 
-    getCategory(id: string): Observable<Category> {
-        this.categoryDoc = this.afs.doc<Category>(`categories/${id}`);
+    getCategory(slug: string): Observable<Category> {
+        this.categoryDoc = this.afs.doc<Category>(`categories/${slug}`);
         this.category$ = this.categoryDoc.snapshotChanges().pipe(
             map((action) => {
                 if (action.payload.exists === false) {
                     return null;
                 } else {
                     const data = action.payload.data() as Category;
-                    data.id = action.payload.id;
+                    data.slug = action.payload.id;
                     return data;
                 }
             })
