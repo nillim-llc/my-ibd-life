@@ -9,3 +9,11 @@
     color: var(--cloud);
     padding: 2rem;
 }
+
+a.social:hover {
+    background-color: var(--sky) !important;
+}
+
+a.social > i:hover {
+    color: var(--matt-blue) !important;
+}
