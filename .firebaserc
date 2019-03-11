@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "my-ibd-life-dev"
+  },
+  "targets": {
+    "my-ibd-life-dev": {
+      "hosting": {
+        "frontend": [
+          "my-ibd-life-dev"
+        ]
+      }
+    }
+  }
+}
