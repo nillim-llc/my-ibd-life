@@ -14,3 +14,62 @@ h1.title {
 p.body {
     font-size: 2rem;
 }
+
+
+/* Cards */
+.page-cards-section {
+    background-color: var(--cloud);
+    padding: 7rem 2rem;
+}
+
+.card-img-caption {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card-img-caption .card-img-top {
+    z-index: 0;
+}
+
+
+.card-img-caption .card-text {
+    width: 100%;
+    padding: 0 1rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    color: var(--light);
+    font-size: 2rem;
+    text-align: left;
+    background-image: linear-gradient(rgba(255, 0, 0, 0), var(--plum));
+}
+
+p.card-text {
+    margin-bottom: 0;
+}
+
+/* Rebate Cards */
+h1.rebate-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.rebate-card-section {
+    background-color: var(--cloud);
+    padding-bottom: 5rem;
+}
+
+.cat-card {
+    max-width: 23rem;
+}
+
+.cat-card-body {
+    /*padding: 2rem 3rem;*/
+    font-size: 1.5rem;
+}
+
+.img-url-icon > i {
+    color: var(--plum);
+    font-size: 3rem;
+    display: inline-block;
+    padding-top: 0.85rem;
+}

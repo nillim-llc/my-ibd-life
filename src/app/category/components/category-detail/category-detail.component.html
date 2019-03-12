@@ -12,3 +12,151 @@
         </div>
     </div>
 </div>
+
+<!-- * PAGES * -->
+<div class="container-fluid page-cards-section">
+    <div class="row">
+        <div class="col-sm-12 col-md-3" *ngFor="let page of pages$ | async">
+            <a [routerLink]="['/pages/', page.id]">
+                <div class="card">
+                    <div class="card-img-caption">
+                        <p class="card-text">
+                            {{ page.title }}
+                        </p>
+                        <img class="card-img-top" [src]="page.photoURL">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- * CARDS * -->
+<div class="rebate-card-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="rebate-title">Rebate Programs</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" *ngIf="card1">
+                <div class="card cat-card">
+                    <div class="card-body cat-card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="img-url-icon"><i [ngClass]="card1.imageUrl"></i></span>
+                            </div>
+                            <div class="col-sm-9">
+                                {{ card1.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" *ngIf="card2">
+                <div class="card cat-card">
+                    <div class="card-body cat-card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="img-url-icon"><i [ngClass]="card2.imageUrl"></i></span>
+                            </div>
+                            <div class="col-sm-9">
+                                {{ card2.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" *ngIf="card3">
+                <div class="card cat-card">
+                    <div class="card-body cat-card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="img-url-icon"><i [ngClass]="card3.imageUrl"></i></span>
+                            </div>
+                            <div class="col-sm-9">
+                                {{ card3.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" *ngIf="card4">
+                <div class="card cat-card">
+                    <div class="card-body cat-card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="img-url-icon"><i [ngClass]="card4.imageUrl"></i></span>
+                            </div>
+                            <div class="col-sm-9">
+                                {{ card4.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" *ngIf="card5">
+                <div class="card cat-card">
+                    <div class="card-body cat-card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="img-url-icon"><i [ngClass]="card5.imageUrl"></i></span>
+                            </div>
+                            <div class="col-sm-9">
+                                {{ card5.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" *ngIf="card6">
+                <div class="card cat-card">
+                    <div class="card-body cat-card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="img-url-icon"><i [ngClass]="card6.imageUrl"></i></span>
+                            </div>
+                            <div class="col-sm-9">
+                                {{ card6.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" *ngIf="card7">
+                <div class="card cat-card">
+                    <div class="card-body cat-card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="img-url-icon"><i [ngClass]="card7.imageUrl"></i></span>
+                            </div>
+                            <div class="col-sm-9">
+                                {{ card7.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" *ngIf="card8">
+                <div class="card cat-card">
+                    <div class="card-body cat-card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="img-url-icon"><i [ngClass]="card8.imageUrl"></i></span>
+                            </div>
+                            <div class="col-sm-9">
+                                {{ card8.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
