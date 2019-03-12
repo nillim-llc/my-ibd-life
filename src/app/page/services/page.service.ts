@@ -25,10 +25,12 @@ export class PageService {
         return this.afs.collection<Page>('pages').valueChanges();
     }
 
-    getPages(): Observable<Page[]> {
+    getPages(slug: string): Observable<Page[]> {
         // Ref, and order by title
-        this.pageCollection = this.afs.collection(`pages`,
-            ref => ref.orderBy('url', 'asc')
+        this.pageCollection = this.afs.collection(`pages`, (ref) =>
+            ref
+            .orderBy('url', 'asc')
+            .where('category', '==', slug)
         );
         // Gets array of pages along with their uid.
         return this.pageCollection.snapshotChanges().pipe(
@@ -50,7 +52,7 @@ export class PageService {
                     return null;
                 } else {
                     const data = action.payload.data() as Page;
-                    data.id = action.payload.id;
+                    data.url = action.payload.id;
                     // console.log('data in getPage()', data);
                     return data;
                 }

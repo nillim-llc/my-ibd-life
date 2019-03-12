@@ -1,5 +1,6 @@
 .cat-detail {
-    margin-top: 12rem;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .icon-img > i {
@@ -19,12 +20,20 @@ p.body {
 /* Cards */
 .page-cards-section {
     background-color: var(--cloud);
-    padding: 7rem 2rem;
+    padding: 7rem 0;
+}
+
+.page-cards-section > .container-fluid {
+    margin: 0 7rem;
 }
 
 .card-img-caption {
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
+}
+
+.page-card {
+    max-width: 21rem;
 }
 
 .card-img-caption .card-img-top {
@@ -53,9 +62,10 @@ h1.rebate-title {
     text-align: center;
     margin-bottom: 3rem;
 }
+
 .rebate-card-section {
     background-color: var(--cloud);
-    padding-bottom: 5rem;
+    padding-bottom: 15rem;
 }
 
 .cat-card {

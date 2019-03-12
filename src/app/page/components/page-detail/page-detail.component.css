@@ -1,0 +1,56 @@
+.container-fluid {
+    position: relative;
+    width: 100%;
+}
+
+img.banner-photo-url {
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+}
+
+.main-container {
+    position: absolute;
+    top: 25% !important;
+    background-color: #ffffff;
+    left: 10%;
+    right: 10%;
+    padding: 5rem 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+h5.subtitle {
+    color: var(--ash);
+}
+
+h1.title {
+    color: var(--midnight);
+    text-align: center;
+    font-weight: 900;
+}
+
+p.summary {
+    color: var(--midnight);
+    text-align: center;
+    line-height: 2.2rem;
+    font-size: 1.3rem;
+    padding: 3rem 7rem;
+    font-weight: 300;
+}
+
+hr.spacer {
+    border-top: 2px solid var(--cloud);
+    padding: 5rem 0 1rem 0;
+}
+
+.text-sections {
+    padding: 0 7rem 20rem 7rem;
+}
+
+.text-section {
+    color: var(--midnight);
+    font-family: var(--serif);
+}

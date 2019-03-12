@@ -39,7 +39,7 @@ export class CategoryDetailComponent implements OnInit {
         this.route.params.pipe(
             switchMap((params: Params) => {
                 this.slug = params['id'];
-
+                this.pages$ = this.pageService.getPages(this.slug);
                 return this.catService.getCategory(this.slug);
             })
         ).subscribe((category) => {
@@ -88,7 +88,7 @@ export class CategoryDetailComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.pages$ = this.pageService.getPages();
+
     }
 
 }

@@ -5,7 +5,12 @@ import { PageComponent } from './components/page.component';
 
 const routes: Routes = [
     {
-        path: 'pages', component: PageComponent, children: [
+        path: 'ibd-relationships', component: PageComponent, children: [
+            { path: ':id', component: PageDetailComponent }
+        ]
+    },
+    {
+        path: 'ibd-insurance', component: PageComponent, children: [
             { path: ':id', component: PageDetailComponent }
         ]
     }

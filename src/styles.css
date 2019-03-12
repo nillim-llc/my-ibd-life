@@ -1,11 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
+    /* Fonts */
+    --serif: 'Georgia', Cambria, serif;
+    --sans-serif: 'Gotham Book', 'Avenir Next', 'Nunito', sans-serif;
+    --monospace: 'SF Mono', Menlo, 'Roboto Mono', monospace;
+
+    /* Colors */
     --dark: #122033;
     --light: #fff;
     --light-gray: #FCFDFD;
-
-    /* AGA Colors */
     --midnight: #122033;
     --matt-blue: #202C40;
     --granite: #678598;
@@ -25,6 +29,8 @@
     --brick: #b02a30;
     --valencia: #f58320;
     --gold: #faa61a;
+
+
 }
 
 body {

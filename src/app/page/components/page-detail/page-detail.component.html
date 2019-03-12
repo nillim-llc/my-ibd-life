@@ -1,3 +1,36 @@
-<p>
-  page-detail works!
-</p>
+<!-- * PAGE-DETAIL * -->
+
+<div class="row" *ngIf="page">
+    <img [src]="page.bannerPhotoURL" class="img-fluid banner-photo-url">
+    <div class="container main-container">
+        <h5 *ngIf="isIBDRelationships; else notIBDRelationships" class="text-center subtitle">IBD &amp;
+            Relationships</h5>
+        <ng-template #notIBDRelationships>
+            <h5 class="text-center subtitle">IBD &nbsp; Insurance</h5>
+        </ng-template>
+        <h1 class="title">
+            {{ page.title }}
+        </h1>
+        <p class="summary">
+            <!-- * TODO: Add Summary * -->
+            <!--{{ page.summary }}-->
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur consequuntur cupiditate dignissimos
+            eum ex exercitationem inventore itaque laboriosam, magni nemo numquam, odio odit optio qui ratione sequi
+            soluta veritatis
+        </p>
+
+        <hr class="spacer">
+
+        <div class="text-sections">
+            <div [innerHTML]="textSectionTop.body"
+                 *ngIf="textSectionTop"
+                 class="text-section">
+            </div>
+            <div [innerHTML]="textSectionBottom.body"
+                 *ngIf="textSectionBottom"
+                 class="text-section">
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,17 +1,26 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PageRoutingModule } from './page-routing.module';
-import { PageComponent } from './components/page.component';
+import { NgModule } from '@angular/core';
 import { PageDetailComponent } from './components/page-detail/page-detail.component';
 import { PageItemComponent } from './components/page-item/page-item.component';
 import { PageListComponent } from './components/page-list/page-list.component';
+import { PageComponent } from './components/page.component';
+
+import { PageRoutingModule } from './page-routing.module';
+import { TextSectionService } from './services/text-section.service';
 
 @NgModule({
-  declarations: [PageComponent, PageDetailComponent, PageItemComponent, PageListComponent],
-  imports: [
-    CommonModule,
-    PageRoutingModule
-  ]
+    declarations: [
+        PageComponent,
+        PageDetailComponent,
+        PageItemComponent,
+        PageListComponent
+    ],
+    imports: [
+        CommonModule,
+        PageRoutingModule
+    ],
+    providers: [
+        TextSectionService
+    ]
 })
-export class PageModule { }
+export class PageModule {}
