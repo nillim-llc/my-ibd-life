@@ -1,36 +1,40 @@
 <!-- * PAGE-DETAIL * -->
+<div class="row" *ngIf="page" id="stage">
+    <!--<img [src]="page.bannerPhotoURL" class="img-fluid banner-photo-url">-->
+    <div class="container main mb-5">
 
-<div class="row" *ngIf="page">
-    <img [src]="page.bannerPhotoURL" class="img-fluid banner-photo-url">
-    <div class="container main-container">
-        <h5 *ngIf="isIBDRelationships; else notIBDRelationships" class="text-center subtitle">IBD &amp;
-            Relationships</h5>
-        <ng-template #notIBDRelationships>
-            <h5 class="text-center subtitle">IBD &nbsp; Insurance</h5>
-        </ng-template>
-        <h1 class="title">
-            {{ page.title }}
-        </h1>
-        <p class="summary">
-            <!-- * TODO: Add Summary * -->
-            <!--{{ page.summary }}-->
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur consequuntur cupiditate dignissimos
-            eum ex exercitationem inventore itaque laboriosam, magni nemo numquam, odio odit optio qui ratione sequi
-            soluta veritatis
-        </p>
+        <div class="row flex-row pt-5">
+            <h5 class="subtitle">
+                <span *ngIf="isIBDRelationships">IBD &amp; Relationships</span>
+                <span *ngIf="!isIBDRelationships">IBD &nbsp; Insurance</span>
+            </h5>
+        </div>
 
-        <hr class="spacer">
-
-        <div class="text-sections">
-            <div [innerHTML]="textSectionTop.body"
-                 *ngIf="textSectionTop"
-                 class="text-section">
+        <div class="row flex-row">
+            <div class="row">
+                <h1 class="title">{{ page.title }}</h1>
             </div>
-            <div [innerHTML]="textSectionBottom.body"
-                 *ngIf="textSectionBottom"
-                 class="text-section">
+
+            <div class="row">
+                <p class="summary">
+                    {{ page.metaDesc }}
+                </p>
+            </div>
+
+            <div class="spacer"></div>
+            <div class="text-sections">
+                <div [innerHTML]="textSectionTop.body"
+                     *ngIf="textSectionTop"
+                     class="text-section">
+                </div>
+                <div [innerHTML]="textSectionBottom.body"
+                     *ngIf="textSectionBottom"
+                     class="text-section">
+                </div>
             </div>
         </div>
     </div>
+
+    <app-footer></app-footer>
 </div>
 

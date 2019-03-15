@@ -15,7 +15,24 @@
                 <a class="nav-item nav-link"
                    *ngFor="let cats of categories"
                    [routerLink]="[cats.slug]">
-                    <i [ngClass]="cats.imageUrl"></i> {{ cats.name }}
+                    <span class="row">
+                        <div class="col-sm-3">
+                        <i [ngClass]="cats.imageUrl"></i>
+                    </div>
+                    <div class="col-sm-9">
+                        {{ cats.name }}
+                    </div>
+                    </span>
+                </a>
+                <a [routerLink]="['/contact-us']" class="nav-item nav-link">
+                    <span class="row">
+                        <span class="col-sm-3">
+                            <i class="fal fa-comment-alt"></i>
+                        </span>
+                        <span class="col-sm-9" id="contact">
+                            Contact Us
+                        </span>
+                    </span>
                 </a>
             </div>
         </div>

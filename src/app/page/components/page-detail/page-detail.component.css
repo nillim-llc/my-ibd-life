@@ -1,25 +1,35 @@
-.container-fluid {
-    position: relative;
+#stage {
+    display: flex;
     width: 100%;
+    height: 300px;
+    background: url(https://firebasestorage.googleapis.com/v0/b/my-ibd-life-dev.appspot.com/o/images%2F2019%2F1552614544597_doctors.png?alt=media&token=cbe25a2c-e558-4273-9974-4df9f2d2631f) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
 }
 
-img.banner-photo-url {
-    top: 0;
-    left: 0;
-    position: relative;
-    width: 100%;
+.flex-row {
+    display: flex;
+    justify-content: center;
 }
 
-.main-container {
-    position: absolute;
-    top: 25% !important;
+.container.main {
+    /*position: fixed;*/
+    /*top: 25% !important;*/
+    margin-top: 10rem;
     background-color: #ffffff;
-    left: 10%;
-    right: 10%;
-    padding: 5rem 0;
+    /*left: 10%;*/
+    /*right: 10%;*/
+    /*padding: 5rem 0;*/
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
+}
+
+.space {
+    text-align: center;
+    display: block;
 }
 
 h5.subtitle {
@@ -37,13 +47,13 @@ p.summary {
     text-align: center;
     line-height: 2.2rem;
     font-size: 1.3rem;
-    padding: 3rem 7rem;
+    padding: 1rem 7rem 0 7rem;
     font-weight: 300;
 }
 
-hr.spacer {
-    border-top: 2px solid var(--cloud);
-    padding: 5rem 0 1rem 0;
+.spacer {
+    border-top: 1px solid var(--cloud);
+    margin-top: 2rem;
 }
 
 .text-sections {
@@ -53,4 +63,6 @@ hr.spacer {
 .text-section {
     color: var(--midnight);
     font-family: var(--serif);
+    margin-top: 3rem;
 }
+

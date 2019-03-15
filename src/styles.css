@@ -3,7 +3,7 @@
 :root {
     /* Fonts */
     --serif: 'Georgia', Cambria, serif;
-    --sans-serif: 'Gotham Book', 'Avenir Next', 'Nunito', sans-serif;
+    --sans-serif: AvenirLTStd-Book, 'Gotham Book', 'Avenir Next', 'Nunito', sans-serif;
     --monospace: 'SF Mono', Menlo, 'Roboto Mono', monospace;
 
     /* Colors */
@@ -30,9 +30,50 @@
     --valencia: #f58320;
     --gold: #faa61a;
 
-
+    /* Link Colors */
+    --link-blue: #C4E5F5;
+    --link-gray: #F1F5F6;
+    --link-yellow: #FFD081;
 }
 
 body {
-    background-color: var(--light-gray);
+    background-color: var(--cloud);
+}
+
+p {
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: var(--matt-blue);
+    border: 1px solid var(--matt-blue);
+    color: var(--cloud);
+}
+
+.btn-primary:hover {
+    background-color: var(--water);
+    border: 1px solid var(--water);
+    color: var(--matt-blue);
+}
+
+.text-section > p > a:link, .text-section > ul > li > a:link {
+    background-color: var(--link-blue);
+    color: var(--midnight);
+    border-bottom: 1px solid var(--ice);
+    text-decoration: none;
+}
+
+
+.text-section > p > a:hover, .text-section > ul > li > a:hover, .text-section > ul > li > a:hover {
+    background-color: var(--link-yellow);
+    color: var(--midnight);
+    border-bottom: 1px solid var(--gold);
+    text-decoration: none;
+}
+
+.text-section > p > a:visited, .text-section > ul > li > a:visited {
+    background-color: var(--silver);
+    color: var(--midnight);
+    border-bottom: 1px solid var(--ash);
+    text-decoration: none;
 }

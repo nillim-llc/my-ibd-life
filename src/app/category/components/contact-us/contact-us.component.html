@@ -1,0 +1,108 @@
+<!-- * CONTACT-US * -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <ng-flash-message class="p-3 text-center"></ng-flash-message>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-4 mb-5">
+                <div class="card-body p-5">
+                    <h1><i class="fal fa-comment-alt"></i>&nbsp;Contact Us</h1>
+                    <hr class="pb-3">
+                    <form [formGroup]="newContact"
+                          (ngSubmit)="onNewContact(newContact.value)">
+
+                        <div class="form-group">
+                            <label>Your First Name<sup>*</sup></label>
+                            <input type="text"
+                                   class="form-control"
+                                   required
+                                   formControlName="firstName">
+                            <p class="help-block alert alert-warning text-center mt-1"
+                               *ngIf="!f.firstName.valid && f.firstName.touched">
+                                First Name is required
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Last Name<sup>*</sup></label>
+                            <input type="text"
+                                   class="form-control"
+                                   required
+                                   formControlName="lastName">
+                            <p class="help-block alert alert-warning text-center mt-1"
+                               *ngIf="!f.lastName.valid && f.lastName.touched">
+                                Last Name is required
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Email Address<sup>*</sup></label>
+                            <input type="email"
+                                   class="form-control"
+                                   required
+                                   formControlName="email">
+                            <p class="help-block alert alert-warning text-center mt-1"
+                               *ngIf="!f.email.valid && f.email.touched">
+                                Email is required
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Phone Number (optional)</label>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Ex: 123-456-7890"
+                                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                   formControlName="phoneNumber">
+                        </div>
+                        <p class="help-block alert alert-warning text-center mt-1"
+                           *ngIf="!f.phoneNumber.valid && f.phoneNumber.touched">
+                            Phone Number is not in the correct format: 123-456-7890
+                        </p>
+
+                        <div class="form-group">
+                            <label>Subject/Title <sup>*</sup></label>
+                            <input type="text"
+                                   class="form-control"
+                                   required
+                                   formControlName="subject">
+                            <p class="help-block alert alert-warning text-center mt-1"
+                               *ngIf="!f.subject.valid && f.subject.touched">
+                                Subject is required
+                            </p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Message Body<sup>*</sup></label>
+                            <textarea class="form-control"
+                                      rows="10"
+                                      required
+                                      formControlName="body">
+                               </textarea>
+                            <p class="help-block alert alert-warning text-center mt-1"
+                               *ngIf="!f.body.valid && f.body.touched">
+                                Body is required
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit"
+                                    class="btn btn-primary btn-lg pl-5 pr-5">
+                                Send
+                            </button>
+                        </div>
+
+                        <p>
+                            <small class="text-muted"><sup>*</sup> Required</small>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

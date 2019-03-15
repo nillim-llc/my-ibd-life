@@ -6,12 +6,23 @@ nav.navbar {
 }
 
 img.logo {
-    max-width: 300px;
+    max-width: 275px;
 }
 
 .navbar-nav > a.nav-item.nav-link {
-    margin: 3rem 4rem;
-    font-size: 2rem;
+    margin: 3rem auto;
+    font-size: 1.3rem;
     color: var(--dark);
     font-weight: 600;
+    max-width: 200px;
+    line-height: 1.5rem;
+}
+
+i.fal {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+#contact {
+    margin-top: 0.5rem;
 }

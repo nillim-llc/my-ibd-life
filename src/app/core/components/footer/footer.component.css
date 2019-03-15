@@ -1,3 +1,9 @@
+.navbar-fixed-bottom {
+    position: s;
+    bottom: 0;
+    width: 100%;
+}
+
 .row.footer-top {
     background-color: var(--midnight);
     color: var(--cloud);

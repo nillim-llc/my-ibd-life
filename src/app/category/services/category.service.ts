@@ -24,7 +24,9 @@ export class CategoryService {
 
     getTwoCategories(): Observable<Category[]> {
         this.categoryCollection = this.afs.collection<Category>('categories', ref => {
-            return ref.limit(2);
+            return ref
+            .orderBy('slug', 'desc')
+            .limit(2);
         });
         return this.categoryCollection.valueChanges();
     }
