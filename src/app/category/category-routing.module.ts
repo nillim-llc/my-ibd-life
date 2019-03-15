@@ -5,12 +5,13 @@ import { CategoryComponent } from './components/category.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 const categoryRoutes: Routes = [
+    { path: 'contact-us', component: ContactUsComponent },
     {
         path: '', component: CategoryComponent, children: [
-            { path: 'contact-us', component: ContactUsComponent },
             { path: ':id', component: CategoryDetailComponent },
         ]
     },
+
 ];
 
 @NgModule({

@@ -13,7 +13,7 @@ const routes: Routes = [
         path: 'ibd-insurance', component: PageComponent, children: [
             { path: ':id', component: PageDetailComponent }
         ]
-    }
+    },
 ];
 
 @NgModule({

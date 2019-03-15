@@ -35,7 +35,7 @@ export class ContactUsComponent implements OnInit {
         private ngFlashMessageService: NgFlashMessageService
     ) {
         this.sentDate = Date.now();
-        this.bannerImage = 'https://s3.amazonaws.com/DDW/ddw-org/images/banners/interior-bg.jpg';
+        // this.bannerImage = 'https://s3.amazonaws.com/DDW/ddw-org/images/banners/interior-bg.jpg';
     }
 
     // For Form Validations
