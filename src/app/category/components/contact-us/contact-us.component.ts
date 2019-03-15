@@ -76,11 +76,11 @@ export class ContactUsComponent implements OnInit {
                 type: 'warning'
             });
         } else {
-            this.contactService.setContact(formData);
-            // .then(() => {
-            // this.sendEmail(formData);
-            // console.log('sendEmail(formData)', formData);
-            // });
+            this.contactService.setContact(formData)
+                .then(() => {
+                    // this.sendEmail(formData);
+                    console.log('sendEmail(formData)', formData);
+                });
             this.newContact.reset();
         }
     }

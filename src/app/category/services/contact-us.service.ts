@@ -76,7 +76,7 @@ export class ContactUsService {
     }
 
 
-    setContact(formData): void {
+    setContact(formData): Promise<void> {
         // Creates new pressRelease with slug as the id
         const newId = this.afs.createId();
         const contactRef: AngularFirestoreDocument<Contact> = this.afs.doc(`contacts/${newId}`);
@@ -93,24 +93,24 @@ export class ContactUsService {
             id: newId,
         };
 
-        contactRef.set(data)
-                  .then(() => {
-                      this.ngFlashMessageService.showFlashMessage({
-                          messages: [`Message sent successfully, Thank you!`],
-                          dismissible: true,
-                          timeout: false,
-                          type: 'success'
-                      });
-                  })
-                  .catch((error) => {
-                      console.error(error);
-                      this.ngFlashMessageService.showFlashMessage({
-                          messages: [`Something went wrong message not sent.`],
-                          dismissible: true,
-                          timeout: false,
-                          type: 'Danger'
-                      });
-                  });
+        return contactRef.set(data)
+                         .then(() => {
+                             this.ngFlashMessageService.showFlashMessage({
+                                 messages: [`Message sent successfully, Thank you!`],
+                                 dismissible: true,
+                                 timeout: false,
+                                 type: 'success'
+                             });
+                         })
+                         .catch((error) => {
+                             console.error(error);
+                             this.ngFlashMessageService.showFlashMessage({
+                                 messages: [`Something went wrong message not sent.`],
+                                 dismissible: true,
+                                 timeout: false,
+                                 type: 'Danger'
+                             });
+                         });
     }
 
     deleteContact(id: string): void {
