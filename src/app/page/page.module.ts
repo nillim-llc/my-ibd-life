@@ -14,7 +14,7 @@ import { TextSectionService } from './services/text-section.service';
         PageComponent,
         PageDetailComponent,
         PageItemComponent,
-        PageListComponent
+        PageListComponent,
     ],
     imports: [
         CommonModule,
@@ -23,6 +23,7 @@ import { TextSectionService } from './services/text-section.service';
     ],
     providers: [
         TextSectionService
-    ]
+    ],
+    exports: []
 })
 export class PageModule {}

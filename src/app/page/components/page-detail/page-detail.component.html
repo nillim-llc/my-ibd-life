@@ -27,6 +27,12 @@
                      *ngIf="textSectionTop"
                      class="text-section">
                 </div>
+
+                <div [innerHTML]="cta.body"
+                     *ngIf="cta"
+                     class="cta">
+                </div>
+
                 <div [innerHTML]="textSectionBottom.body"
                      *ngIf="textSectionBottom"
                      class="text-section">

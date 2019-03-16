@@ -7,10 +7,11 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 const categoryRoutes: Routes = [
     { path: 'contact-us', component: ContactUsComponent },
     {
-        path: '', component: CategoryComponent, children: [
-            { path: ':id', component: CategoryDetailComponent },
+        path: ':id', component: CategoryComponent, children: [
+            { path: '', component: CategoryDetailComponent },
         ]
     },
+
 
 ];
 

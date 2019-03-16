@@ -3,7 +3,7 @@
 :root {
     /* Fonts */
     --serif: 'Georgia', Cambria, serif;
-    --sans-serif: AvenirLTStd-Book, 'Gotham Book', 'Avenir Next', 'Nunito', sans-serif;
+    --sans-serif: "Gotham SSm A", "Gotham SSm B", AvenirLTStd-Book, 'Gotham Book', 'Avenir Next', 'Nunito', sans-serif !important;
     --monospace: 'SF Mono', Menlo, 'Roboto Mono', monospace;
 
     /* Colors */
@@ -34,6 +34,11 @@
     --link-blue: #C4E5F5;
     --link-gray: #F1F5F6;
     --link-yellow: #FFD081;
+
+    /* Homepage Colors */
+    --sec-one-blue: #C8EBFB;
+    --sec-two-blue: #E3F4FC;
+
 }
 
 body {
@@ -42,6 +47,14 @@ body {
 
 p {
     font-weight: 300;
+}
+
+.serif {
+    font-family: var(--serif);
+}
+
+.sans {
+    font-family: var(--sans-serif);
 }
 
 .btn-primary {
@@ -56,7 +69,8 @@ p {
     color: var(--matt-blue);
 }
 
-.text-section > p > a:link, .text-section > ul > li > a:link {
+.text-section > p > a:link,
+.text-section > ul > li > a:link {
     background-color: var(--link-blue);
     color: var(--midnight);
     border-bottom: 1px solid var(--ice);
@@ -64,14 +78,17 @@ p {
 }
 
 
-.text-section > p > a:hover, .text-section > ul > li > a:hover, .text-section > ul > li > a:hover {
+.text-section > p > a:hover,
+.text-section > ul > li > a:hover,
+.text-section > ul > li > a:hover {
     background-color: var(--link-yellow);
     color: var(--midnight);
     border-bottom: 1px solid var(--gold);
     text-decoration: none;
 }
 
-.text-section > p > a:visited, .text-section > ul > li > a:visited {
+.text-section > p > a:visited,
+.text-section > ul > li > a:visited {
     background-color: var(--silver);
     color: var(--midnight);
     border-bottom: 1px solid var(--ash);

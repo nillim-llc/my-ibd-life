@@ -1,0 +1,108 @@
+<!-- * HOME * -->
+<div class="row section-one" *ngIf="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="title">{{ home.sec1Title }}</h1>
+                <p class="subtitle">
+                    {{ home.sec1Subtitle }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row image-section" *ngIf="home">
+    <div class="container">
+        <div class="text-center">
+            <img [src]="home.sec1ImageUrl"
+                 style="width:200px; height:200px;"
+                 class="rounded-circle seal-img">
+        </div>
+    </div>
+</div>
+
+<div class="row section-two" *ngIf="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {{ home.sec2TextLeft }}
+            </div>
+            <div class="col-md-6">
+                {{ home.sec2TextRight }}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row section-three" *ngIf="home">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-sm-12 text-center">
+                <h2 class="serif">{{ home.sec3Title }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 offset-md-3 text-center">
+                <p>{{ home.sec3CardLeftTitle }}</p>
+                <p class="icons">
+                    <i [ngClass]="home.sec3CardLeftImageUrl"></i>
+                </p>
+            </div>
+            <div class="col-md-2 text-center">
+                <p>{{ home.sec3CardMiddleImageUrl }}</p>
+                <p class="icons">
+                    <i [ngClass]="home.sec3CardMiddleImageUrl"></i>
+                </p>
+            </div>
+            <div class="col-md-2 text-center">
+                <p>{{ home.sec3CardRightTitle }}</p>
+                <p class="icons">
+                    <i [ngClass]="home.sec3CardRightImageUrl"></i>
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center mt-5">
+            <div class="col-md-6 offset-md-3">
+                <h5 class="section-three-subtitle">
+                    {{ home.sec3Subtitle }}
+                </h5>
+                <p class="section-three-text mt-3">
+                    <span [innerHTML]="home.sec3Text"></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img [src]="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img [src]="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row section-four" *ngIf="home">
+    <div class="container text-center">
+        <div class="col-md-6 offset-md-3">
+            <p class="bottom-icon">
+                <i [ngClass]="home.sec4ImageUrl"></i>
+            </p>
+            <p class="section-four-text-top">
+                {{ home.sec4Title }}
+            </p>
+            <p class="section-four-text-bottom serif">
+                {{ home.sec4Text }}
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- * FOOTER * -->
+<app-footer></app-footer>

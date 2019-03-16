@@ -66,3 +66,8 @@ p.summary {
     margin-top: 3rem;
 }
 
+.cta {
+    color: var(--midnight);
+    font-family: var(--serif);
+    margin-top: 3rem;
+}

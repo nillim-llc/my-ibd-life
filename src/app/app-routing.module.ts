@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryModule } from './category/category.module';
+import { HomeModule } from './home/home.module';
+import { PageModule } from './page/page.module';
 
 
 const routes: Routes = [
-    // { path: '', loadChildren: './category/category.module#CategoryModule' },
-    { path: '', loadChildren: './page/page.module#PageModule' },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
@@ -16,6 +16,8 @@ const routes: Routes = [
     exports: [
         RouterModule,
         CategoryModule,
+        PageModule,
+        HomeModule
     ]
 })
 export class AppRoutingModule {}

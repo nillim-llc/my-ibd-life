@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CallToAction } from '../../models/call-to-action';
 import { Page } from '../../models/page';
 import { TextSection } from '../../models/text-section';
 import { PageService } from '../../services/page.service';
@@ -14,6 +15,7 @@ export class PageDetailComponent implements OnInit {
     page: Page;
     url: string;
     isIBDRelationships: boolean;
+    cta: CallToAction;
     textSectionTop: TextSection;
     textSectionBottom: TextSection;
 
@@ -38,6 +40,11 @@ export class PageDetailComponent implements OnInit {
                 if (page.contentSectionBottom) {
                     this.tsService.getTextSection(page.contentSectionBottom).subscribe((ts: TextSection) => {
                         this.textSectionBottom = ts;
+                    });
+                }
+                if (page.callToAction) {
+                    this.tsService.getCallToAction(page.callToAction).subscribe((cta: CallToAction) => {
+                        this.cta = cta;
                     });
                 }
             }

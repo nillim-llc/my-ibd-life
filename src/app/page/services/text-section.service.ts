@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { CallToAction } from '../models/call-to-action';
 import { TextSection } from '../models/text-section';
 
 @Injectable({
@@ -10,6 +11,8 @@ import { TextSection } from '../models/text-section';
 export class TextSectionService {
     textSectionCollection: AngularFirestoreCollection<TextSection>;
     textSectionDoc: AngularFirestoreDocument<TextSection>;
+    ctaDoc: AngularFirestoreDocument<CallToAction>;
+    cta$: Observable<CallToAction>;
     textSection$: Observable<TextSection>;
     currentDate: number = Date.now();
 
@@ -60,6 +63,25 @@ export class TextSectionService {
         );
 
         return this.textSection$;
+    }
+
+
+    getCallToAction(id: string): Observable<CallToAction> {
+        this.ctaDoc = this.afs.doc<CallToAction>(`callToActions/${id}`);
+        this.cta$ = this.ctaDoc.snapshotChanges().pipe(
+            map((a) => {
+                if (a.payload.exists === false) {
+                    return null;
+                } else {
+                    const data = a.payload.data() as CallToAction;
+                    data.id = a.payload.id;
+                    // console.log('data in getTextSection()', data);
+                    return data;
+                }
+            })
+        );
+
+        return this.cta$;
     }
 
 }
