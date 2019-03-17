@@ -1,4 +1,5 @@
 <!-- * HOME * -->
+<!-- * Section One * -->
 <div class="row section-one" *ngIf="home">
     <div class="container">
         <div class="row">
@@ -22,6 +23,7 @@
     </div>
 </div>
 
+<!-- * Section Two * -->
 <div class="row section-two" *ngIf="home">
     <div class="container">
         <div class="row">
@@ -35,7 +37,7 @@
     </div>
 </div>
 
-
+<!-- * Section Three * -->
 <div class="row section-three" *ngIf="home">
     <div class="container">
         <div class="row mb-5">
@@ -51,7 +53,7 @@
                 </p>
             </div>
             <div class="col-md-2 text-center">
-                <p>{{ home.sec3CardMiddleImageUrl }}</p>
+                <p>{{ home.sec3CardMiddleTitle }}</p>
                 <p class="icons">
                     <i [ngClass]="home.sec3CardMiddleImageUrl"></i>
                 </p>
@@ -86,7 +88,7 @@
     </div>
 </div>
 
-
+<!-- * Section Four * -->
 <div class="row section-four" *ngIf="home">
     <div class="container text-center">
         <div class="col-md-6 offset-md-3">

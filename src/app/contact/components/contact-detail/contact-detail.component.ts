@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
-import { NgFlashMessageService } from 'ng-flash-messages';
 import { Contact } from '../../models/contact';
 import { ContactUsService } from '../../services/contact-us.service';
 
@@ -21,13 +20,14 @@ export class ContactDetailComponent implements OnInit {
     body: string;
     sentDate: number;
     id: string;
+    showSuccessMsg: boolean;
+    showDangerMsg: boolean;
 
     constructor(
         private fb: FormBuilder,
         private contactService: ContactUsService,
         private titleService: Title,
         private meta: Meta,
-        private ngFlashMessageService: NgFlashMessageService
     ) {
         this.sentDate = Date.now();
         // this.bannerImage = 'https://s3.amazonaws.com/DDW/ddw-org/images/banners/interior-bg.jpg';
@@ -37,6 +37,15 @@ export class ContactDetailComponent implements OnInit {
     get f() {
         return this.newContact.controls;
     }
+
+    closeSuccMsg() {
+        this.showSuccessMsg = !this.showSuccessMsg;
+    }
+
+    closeDangMsg() {
+        this.showDangerMsg = !this.showDangerMsg;
+    }
+
 
     ngOnInit() {
         this.titleService.setTitle(`Contact Us - MyIBD Life`);
@@ -62,36 +71,35 @@ export class ContactDetailComponent implements OnInit {
         this.sentDate = this.newContact.value.sentDate;
     }
 
+
     onNewContact(formData: Contact) {
         if (!this.newContact.valid) {
-            this.ngFlashMessageService.showFlashMessage({
-                messages: [`Required form values are missing or phone number is not in correct format, Form NOT sent.`],
-                dismissible: true,
-                timeout: false,
-                type: 'warning'
-            });
+            this.showDangerMsg = true;
         } else {
-            this.contactService.setContact(formData)
-                .then(() => {
-                    // this.sendEmail(formData);
-                    console.log('sendEmail(formData)', formData);
-                });
+            this.contactService.setContact(formData);
             this.newContact.reset();
+            this.showSuccessMsg = true;
+            // .then(() => {
+            //     // this.sendEmail(formData);
+            //     // console.log('sendEmail(formData)', formData);
+            //
+            // });
+
         }
     }
 
-    sendEmail(formData: Contact) {
-        const endpoint = `https://us-central1-ddw-org.cloudfunctions.net/firestoreEmail`;
-        const data = {
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            phoneNumber: formData.phoneNumber,
-            subject: formData.subject,
-            body: formData.body,
-        };
-        console.log('data in sendEmail', data);
-
-        // this.httpClient.post(endpoint, data).subscribe();
-    }
+    // sendEmail(formData: Contact) {
+    //     const endpoint = `https://us-central1-ddw-org.cloudfunctions.net/firestoreEmail`;
+    //     const data = {
+    //         firstName: formData.firstName,
+    //         lastName: formData.lastName,
+    //         email: formData.email,
+    //         phoneNumber: formData.phoneNumber,
+    //         subject: formData.subject,
+    //         body: formData.body,
+    //     };
+    //     console.log('data in sendEmail', data);
+    //
+    //     // this.httpClient.post(endpoint, data).subscribe();
+    // }
 }

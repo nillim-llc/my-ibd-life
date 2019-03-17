@@ -1,8 +1,21 @@
 <!-- * CONTACT-US * -->
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="showSuccessMsg">
         <div class="col-md-8 offset-md-2">
-            <ng-flash-message class="p-3 text-center"></ng-flash-message>
+            <p class="alert alert-success mt-3">
+                Message sent successfully, Thank you! <a (click)="closeSuccMsg()"
+                                                         style="cursor:pointer;"
+                                                         class="float-right"><i class="fa fa-times"></i></a>
+            </p>
+        </div>
+    </div>
+    <div class="row" *ngIf="showDangerMsg">
+        <div class="col-md-8 offset-md-2">
+            <p class="alert alert-danger mt-3">
+                Form is invalid, please check all the required fields. <a (click)="closeDangMsg()"
+                                                         style="cursor:pointer;"
+                                                         class="float-right"><i class="fa fa-times"></i></a>
+            </p>
         </div>
     </div>
     <div class="row">
@@ -103,6 +116,25 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="showSuccessMsg">
+        <div class="col-md-8 offset-md-2">
+            <p class="alert alert-success">
+                Message sent successfully, Thank you! <a (click)="closeSuccMsg()"
+                                                         style="cursor:pointer;"
+                                                         class="float-right"><i class="fa fa-times"></i></a>
+
+            </p>
+        </div>
+    </div>
+    <div class="row" *ngIf="showDangerMsg">
+        <div class="col-md-8 offset-md-2">
+            <p class="alert alert-danger mt-3">
+                Form is invalid, please check all the required fields. <a (click)="closeDangMsg()"
+                                                                          style="cursor:pointer;"
+                                                                          class="float-right"><i class="fa fa-times"></i></a>
+            </p>
         </div>
     </div>
 </div>
