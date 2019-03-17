@@ -1,23 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryModule } from './category/category.module';
+import { ContactModule } from './contact/contact.module';
 import { HomeModule } from './home/home.module';
 import { PageModule } from './page/page.module';
 
 
 const routes: Routes = [
-    { path: '**', redirectTo: '', pathMatch: 'full' }
+    // { path: 'page', loadChildren: './page/page.module#PageModule' },
+    // { path: 'home', loadChildren: './home/home.module#HomeModule' },
+    // { path: 'category', loadChildren: './category/category.module#CategoryModule' },
+    // { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
+        PageModule,
+        HomeModule,
+        CategoryModule,
+        ContactModule,
     ],
     exports: [
         RouterModule,
-        CategoryModule,
         PageModule,
-        HomeModule
+        HomeModule,
+        CategoryModule,
+        ContactModule,
     ]
 })
 export class AppRoutingModule {}

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageDetailComponent } from './components/page-detail/page-detail.component';
 import { PageComponent } from './components/page.component';
 
-const routes: Routes = [
+const pageRoutes: Routes = [
     {
         path: 'ibd-relationships', component: PageComponent, children: [
             { path: ':id', component: PageDetailComponent },
@@ -14,12 +14,11 @@ const routes: Routes = [
             { path: ':id', component: PageDetailComponent },
         ]
     },
-
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forChild(routes)
+        RouterModule.forChild(pageRoutes)
     ],
     exports: [
         RouterModule

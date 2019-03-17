@@ -5,7 +5,6 @@ import { PageDetailComponent } from './components/page-detail/page-detail.compon
 import { PageItemComponent } from './components/page-item/page-item.component';
 import { PageListComponent } from './components/page-list/page-list.component';
 import { PageComponent } from './components/page.component';
-
 import { PageRoutingModule } from './page-routing.module';
 import { TextSectionService } from './services/text-section.service';
 

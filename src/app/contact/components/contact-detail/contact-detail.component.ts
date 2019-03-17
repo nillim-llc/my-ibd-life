@@ -7,13 +7,12 @@ import { ContactUsService } from '../../services/contact-us.service';
 
 @Component({
     selector: 'app-contact-us',
-    templateUrl: './contact-us.component.html',
-    styleUrls: ['./contact-us.component.css']
+    templateUrl: './contact-detail.component.html',
+    styleUrls: ['./contact-detail.component.css']
 })
-export class ContactUsComponent implements OnInit {
+export class ContactDetailComponent implements OnInit {
     newContact: FormGroup;
     contact: Contact;
-    $key: string;
     firstName: string;
     lastName: string;
     email: string;
@@ -21,11 +20,7 @@ export class ContactUsComponent implements OnInit {
     subject: string;
     body: string;
     sentDate: number;
-    uid: string;
-    bannerImage: string;
-    headerbar: any;
-    footerbar: any;
-
+    id: string;
 
     constructor(
         private fb: FormBuilder,

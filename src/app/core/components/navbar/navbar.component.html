@@ -14,7 +14,7 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link"
                    *ngFor="let cats of categories"
-                   [routerLink]="[cats.slug]">
+                   [routerLink]="['categories', cats.slug]">
                     <span class="row">
                         <div class="col-sm-3">
                         <i [ngClass]="cats.imageUrl"></i>
@@ -24,7 +24,7 @@
                     </div>
                     </span>
                 </a>
-                <a [routerLink]="['/contact-us']" class="nav-item nav-link">
+                <a [routerLink]="['/contact']" class="nav-item nav-link">
                     <span class="row">
                         <span class="col-sm-3">
                             <i class="fal fa-comment-alt"></i>
