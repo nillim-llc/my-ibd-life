@@ -19,14 +19,12 @@
         <div class="row">
             <div class="col-sm-12 col-md-3" *ngFor="let page of pages$ | async">
                 <a [routerLink]="['/', page.category, page.url]">
-                    <div class="card page-card">
-                        <div class="card-img-caption">
-                            <p class="card-text">
-                                {{ page.title }}
-                            </p>
-                            <img class="card-img-top" [src]="page.photoURL">
-                        </div>
-                    </div>
+                    <figure class="page-caption">
+                        <img class="page"
+                             [src]="page.photoURL"
+                             [alt]="page.title"/>
+                        <figcaption class="page-caption-text">{{ page.title }}</figcaption>
+                    </figure>
                 </a>
             </div>
         </div>

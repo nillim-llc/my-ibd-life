@@ -1,6 +1,6 @@
 <!-- * PAGE-DETAIL * -->
 <div class="row" *ngIf="page" id="stage">
-    <!--<img [src]="page.bannerPhotoURL" class="img-fluid banner-photo-url">-->
+    <img [src]="page.bannerPhotoURL" class="img-fluid banner-photo-url">
     <div class="container main mb-5">
 
         <div class="row flex-row pt-5">
@@ -23,19 +23,26 @@
 
             <div class="spacer"></div>
             <div class="text-sections">
-                <div [innerHTML]="textSectionTop.body"
-                     *ngIf="textSectionTop"
-                     class="text-section">
+                <div class="row" *ngIf="textSectionTop">
+                    <div [innerHTML]="textSectionTop.body"
+                         class="text-section">
+                    </div>
                 </div>
 
-                <div [innerHTML]="cta.body"
-                     *ngIf="cta"
-                     class="cta">
+                <div class="row cta-image-row" *ngIf="page && cta && cta.imageUrl">
+                    <img [src]="cta.imageUrl" class="img-fluid cta-img">
                 </div>
 
-                <div [innerHTML]="textSectionBottom.body"
-                     *ngIf="textSectionBottom"
-                     class="text-section">
+                <div class="row" *ngIf="page && cta && cta.body">
+                    <div [innerHTML]="cta.body"
+                         class="cta">
+                    </div>
+                </div>
+
+                <div class="row" *ngIf="textSectionBottom">
+                    <div [innerHTML]="textSectionBottom.body"
+                         class="text-section">
+                    </div>
                 </div>
             </div>
         </div>

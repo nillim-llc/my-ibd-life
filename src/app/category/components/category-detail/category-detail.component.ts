@@ -39,7 +39,7 @@ export class CategoryDetailComponent implements OnInit {
         this.route.params.pipe(
             switchMap((params: Params) => {
                 this.slug = params['id'];
-                this.pages$ = this.pageService.getPages(this.slug);
+                this.pages$ = this.pageService.getPublishedPagesBySortOrderAndCategory(this.slug);
                 return this.catService.getCategory(this.slug);
             })
         ).subscribe((category) => {
@@ -47,43 +47,59 @@ export class CategoryDetailComponent implements OnInit {
                 this.category = category;
 
                 if (category.card1 !== '') {
-                    this.cardService.getCard(category.card1).subscribe((card1) => {
-                        this.card1 = card1;
+                    this.cardService.getCard(category.card1).subscribe((card1: Card) => {
+                        if (card1) {
+                            this.card1 = card1;
+                        }
                     });
                 }
                 if (category.card2 !== '') {
-                    this.cardService.getCard(category.card2).subscribe((card2) => {
-                        this.card2 = card2;
+                    this.cardService.getCard(category.card2).subscribe((card2: Card) => {
+                        if (card2) {
+                            this.card2 = card2;
+                        }
                     });
                 }
                 if (category.card3 !== '') {
-                    this.cardService.getCard(category.card3).subscribe((card3) => {
-                        this.card3 = card3;
+                    this.cardService.getCard(category.card3).subscribe((card3: Card) => {
+                        if (card3) {
+                            this.card3 = card3;
+                        }
                     });
                 }
                 if (category.card4 !== '') {
-                    this.cardService.getCard(category.card4).subscribe((card4) => {
-                        this.card4 = card4;
+                    this.cardService.getCard(category.card4).subscribe((card4: Card) => {
+                        if (card4) {
+                            this.card4 = card4;
+                        }
                     });
                 }
                 if (category.card5 !== '') {
-                    this.cardService.getCard(category.card5).subscribe((card5) => {
-                        this.card5 = card5;
+                    this.cardService.getCard(category.card5).subscribe((card5: Card) => {
+                        if (card5) {
+                            this.card5 = card5;
+                        }
                     });
                 }
                 if (category.card6 !== '') {
-                    this.cardService.getCard(category.card6).subscribe((card6) => {
-                        this.card6 = card6;
+                    this.cardService.getCard(category.card6).subscribe((card6: Card) => {
+                        if (card6) {
+                            this.card6 = card6;
+                        }
                     });
                 }
                 if (category.card7 !== '') {
-                    this.cardService.getCard(category.card7).subscribe((card7) => {
-                        this.card7 = card7;
+                    this.cardService.getCard(category.card7).subscribe((card7: Card) => {
+                        if (card7) {
+                            this.card7 = card7;
+                        }
                     });
                 }
                 if (category.card8 !== '') {
-                    this.cardService.getCard(category.card8).subscribe((card8) => {
-                        this.card8 = card8;
+                    this.cardService.getCard(category.card8).subscribe((card8: Card) => {
+                        if (card8) {
+                            this.card8 = card8;
+                        }
                     });
                 }
             }

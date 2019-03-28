@@ -44,6 +44,27 @@ export class PageService {
         );
     }
 
+
+    getPublishedPagesBySortOrderAndCategory(slug: string): Observable<Page[]> {
+        // Ref, and order by title
+        this.pageCollection = this.afs.collection(`pages`, (ref) =>
+            ref
+            .orderBy('sortOrder', 'asc')
+            .where('published', '==', true)
+            .where('category', '==', slug)
+        );
+        // Gets array of pages along with their uid.
+        return this.pageCollection.snapshotChanges().pipe(
+            map((changes) => {
+                return changes.map((a) => {
+                    const data = a.payload.doc.data() as Page;
+                    data.id = a.payload.doc.id;
+                    return data;
+                });
+            })
+        );
+    }
+
     getPage(url: string): Observable<Page> {
         this.pageDoc = this.afs.doc<Page>(`pages/${url}`);
         this.page = this.pageDoc.snapshotChanges().pipe(

@@ -77,12 +77,26 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <img [src]="" class="img-fluid">
+        <div class="row mt-5">
+            <div class="col-md-7" *ngIf="category1">
+                <a [routerLink]="['/categories/', category1.slug]">
+                    <figure class="caption">
+                        <img class="category"
+                             [src]="category1.homepageImageUrl"
+                             [alt]="category1.name"/>
+                        <figcaption class="caption-text">{{ category1.name }}</figcaption>
+                    </figure>
+                </a>
             </div>
-            <div class="col-md-6">
-                <img [src]="" class="img-fluid">
+            <div class="col-md-5" *ngIf="category2">
+                <a [routerLink]="['/categories/', category2.slug]">
+                    <figure class="caption">
+                        <img class="category"
+                             [src]="category2.homepageImageUrl"
+                             [alt]="category2.name"/>
+                        <figcaption class="caption-text">{{ category2.name }}</figcaption>
+                    </figure>
+                </a>
             </div>
         </div>
     </div>
