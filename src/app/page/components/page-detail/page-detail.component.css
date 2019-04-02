@@ -38,16 +38,19 @@ img.banner-photo-url {
 }
 
 h5.subtitle {
+    font-family: var(--sans-serif);
     color: var(--ash);
 }
 
 h1.title {
+    font-family: var(--sans-serif-bold);
     color: var(--midnight);
     text-align: center;
     font-weight: 900;
 }
 
 p.summary {
+    font-family: var(--sans-serif);
     color: var(--midnight);
     text-align: center;
     line-height: 2.2rem;

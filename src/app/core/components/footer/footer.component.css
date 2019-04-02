@@ -1,5 +1,4 @@
 .navbar-fixed-bottom {
-    position: s;
     bottom: 0;
     width: 100%;
 }
@@ -8,6 +7,10 @@
     background-color: var(--midnight);
     color: var(--cloud);
     padding: 5rem;
+}
+
+img.logo {
+    max-width: 450px;
 }
 
 .row.footer-bottom {
@@ -22,4 +25,9 @@ a.social:hover {
 
 a.social > i:hover {
     color: var(--matt-blue) !important;
+}
+
+p.copy {
+    color: var(--cloud);
+    font-family: var(--sans-serif);
 }

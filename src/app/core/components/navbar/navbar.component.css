@@ -5,13 +5,18 @@ nav.navbar {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.03);
 }
 
+h5.cat {
+    font-family: var(--sans-serif-bold) !important;
+    font-weight: bold;
+}
+
 img.logo {
     max-width: 275px;
 }
 
 .navbar-nav > a.nav-item.nav-link {
-    margin: 3rem auto;
-    font-size: 1.3rem;
+    margin: 2.5rem;
+    font-size: 1rem;
     color: var(--dark);
     font-weight: 600;
     max-width: 200px;

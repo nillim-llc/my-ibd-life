@@ -17,7 +17,7 @@
     <div class="container">
         <div class="text-center">
             <img [src]="home.sec1ImageUrl"
-                 style="width:200px; height:200px;"
+                 style="width:250px; height:250px;"
                  class="rounded-circle seal-img">
         </div>
     </div>
@@ -27,11 +27,15 @@
 <div class="row section-two" *ngIf="home">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                {{ home.sec2TextLeft }}
+            <div class="col-md-4 offset-md-1">
+                <p class="sec-two">
+                    {{ home.sec2TextLeft }}
+                </p>
             </div>
-            <div class="col-md-6">
-                {{ home.sec2TextRight }}
+            <div class="col-md-4 offset-md-2">
+                <p class="sec-two">
+                    {{ home.sec2TextRight }}
+                </p>
             </div>
         </div>
     </div>
@@ -47,19 +51,21 @@
         </div>
         <div class="row">
             <div class="col-md-2 offset-md-3 text-center">
-                <p>{{ home.sec3CardLeftTitle }}</p>
+                <p class="sans">{{ home.sec3CardLeftTitle }}</p>
+                <br>
                 <p class="icons">
                     <i [ngClass]="home.sec3CardLeftImageUrl"></i>
                 </p>
             </div>
             <div class="col-md-2 text-center">
-                <p>{{ home.sec3CardMiddleTitle }}</p>
+                <p class="sans">{{ home.sec3CardMiddleTitle }}</p>
                 <p class="icons">
                     <i [ngClass]="home.sec3CardMiddleImageUrl"></i>
                 </p>
             </div>
             <div class="col-md-2 text-center">
-                <p>{{ home.sec3CardRightTitle }}</p>
+                <p class="sans">{{ home.sec3CardRightTitle }}</p>
+                <br>
                 <p class="icons">
                     <i [ngClass]="home.sec3CardRightImageUrl"></i>
                 </p>
@@ -71,7 +77,7 @@
                 <h5 class="section-three-subtitle">
                     {{ home.sec3Subtitle }}
                 </h5>
-                <p class="section-three-text mt-3">
+                <p class="section-three-text mt-3 sans">
                     <span [innerHTML]="home.sec3Text"></span>
                 </p>
             </div>
@@ -90,7 +96,7 @@
             </div>
             <div class="col-md-5" *ngIf="category2">
                 <a [routerLink]="['/categories/', category2.slug]">
-                    <figure class="caption">
+                    <figure class="caption-right">
                         <img class="category"
                              [src]="category2.homepageImageUrl"
                              [alt]="category2.name"/>
@@ -106,10 +112,10 @@
 <div class="row section-four" *ngIf="home">
     <div class="container text-center">
         <div class="col-md-6 offset-md-3">
-            <p class="bottom-icon">
+            <p class="bottom-icon sans">
                 <i [ngClass]="home.sec4ImageUrl"></i>
             </p>
-            <p class="section-four-text-top">
+            <p class="section-four-text-top sans">
                 {{ home.sec4Title }}
             </p>
             <p class="section-four-text-bottom serif">
