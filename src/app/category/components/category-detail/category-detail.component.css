@@ -38,6 +38,7 @@ p.body {
 h1.rebate-title {
     text-align: center;
     margin-bottom: 3rem;
+    font-family: var(--sans-serif-bold);
 }
 
 .rebate-card-section {
@@ -54,11 +55,15 @@ h1.rebate-title {
     font-size: 1.5rem;
 }
 
+h4.rebate-text {
+    font-family: var(--sans-serif);
+}
+
 .img-url-icon > i {
     color: var(--gum);
     font-size: 3rem;
     display: inline-block;
-    padding-top: 0.85rem;
+    padding-top: 0.5rem;
 }
 
 /* Text Image Overlay */
@@ -101,4 +106,5 @@ h1.rebate-title {
     box-sizing: border-box;
     white-space: pre-wrap;
     max-width: 300px;
+    line-height: 2.2rem;
 }

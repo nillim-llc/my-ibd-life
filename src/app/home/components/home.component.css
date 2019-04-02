@@ -128,3 +128,22 @@ p.section-four-text-bottom {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+
+.icon {
+    padding-top: 0.5rem;
+}
+
+.icon > i {
+    font-size: 3rem;
+}
+
+.cat-name {
+    line-height: 2.1rem;
+}
+
+.cat-name-right {
+    line-height: 2.1rem;
+    max-width: 200px;
+}
+
