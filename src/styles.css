@@ -47,11 +47,11 @@
 
 :root {
     /* Fonts */
-    --serif: 'Georgia', Cambria, serif;
+    --serif: 'Georgia', Cambria, serif !important;
     --sans-serif: 'Gotham Regular', AvenirLTStd-Book, 'Gotham Book', 'Avenir Next', 'Nunito', sans-serif !important;
     --sans-serif-bold: 'Gotham Bold', AvenirLTStd-Heavy, 'Gotham Book', 'Avenir Next', 'Nunito', sans-serif !important;
-    --gotham: "Gotham Regular", "Gotham SSm A", "Gotham SSm B", sans-serif;
-    --monospace: 'SF Mono', Menlo, 'Roboto Mono', monospace;
+    --gotham: "Gotham Regular", "Gotham SSm A", "Gotham SSm B", sans-serif !important;
+    --monospace: 'SF Mono', Menlo, 'Roboto Mono', 'Deja Vu Sans Mono', 'Monaco', monospace !important;
 
     /* Colors */
     --dark: #122033;

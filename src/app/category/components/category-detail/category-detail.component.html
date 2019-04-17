@@ -33,143 +33,269 @@
 
 <!-- * CARDS * -->
 <div class="rebate-card-section" *ngIf="category && category.showCards">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
                 <h1 class="rebate-title">Rebate Programs</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4" *ngIf="card1">
+        <div class="row mb-3">
+            <div class="col-md-3" *ngIf="card1">
                 <div class="card cat-card">
-                    <div class="card-body cat-card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="img-url-icon"><i [ngClass]="card1.imageUrl"></i></span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="rebate-text">
-                                    {{ card1.title }}
-                                </h4>
+                    <a [href]="card1.url" *ngIf="!card1.isExtUrl">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card1.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card1.title }}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                    <a [href]="card1.url" *ngIf="card1.isExtUrl" target="_blank" class="card-url">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card1.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card1.title }}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4" *ngIf="card2">
+            <div class="col-md-3" *ngIf="card2">
                 <div class="card cat-card">
-                    <div class="card-body cat-card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="img-url-icon"><i [ngClass]="card2.imageUrl"></i></span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="rebate-text">
-                                    {{ card2.title }}
-                                </h4>
+                    <a [href]="card2.url" *ngIf="!card2.isExtUrl">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card2.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card2.title }}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                    <a [href]="card2.url" *ngIf="card2.isExtUrl" target="_blank" class="card-url">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card2.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card2.title }}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4" *ngIf="card3">
+            <div class="col-md-3" *ngIf="card3">
                 <div class="card cat-card">
-                    <div class="card-body cat-card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="img-url-icon"><i [ngClass]="card3.imageUrl"></i></span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="rebate-text">
-                                    {{ card3.title }}
-                                </h4>
+                    <a [href]="card3.url" *ngIf="!card3.isExtUrl">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card3.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card3.title }}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                    <a [href]="card3.url" *ngIf="card3.isExtUrl" target="_blank" class="card-url">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card3.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card3.title }}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3" *ngIf="card4">
+                <div class="card cat-card">
+                    <a [href]="card4.url" *ngIf="!card4.isExtUrl">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card4.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card4.title }}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a [href]="card4.url" *ngIf="card4.isExtUrl" target="_blank" class="card-url">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card4.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card4.title }}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4" *ngIf="card4">
+            <div class="col-md-3" *ngIf="card5">
                 <div class="card cat-card">
-                    <div class="card-body cat-card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="img-url-icon"><i [ngClass]="card4.imageUrl"></i></span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="rebate-text">
-                                    {{ card4.title }}
-                                </h4>
+                    <a [href]="card5.url" *ngIf="!card5.isExtUrl">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card5.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card5.title }}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                    <a [href]="card5.url" *ngIf="card5.isExtUrl" target="_blank" class="card-url">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card5.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card5.title }}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4" *ngIf="card5">
+            <div class="col-md-3" *ngIf="card6">
                 <div class="card cat-card">
-                    <div class="card-body cat-card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="img-url-icon"><i [ngClass]="card5.imageUrl"></i></span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="rebate-text">
-                                    {{ card5.title }}
-                                </h4>
+                    <a [href]="card6.url" *ngIf="!card6.isExtUrl">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card6.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card6.title }}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                    <a [href]="card6.url" *ngIf="card6.isExtUrl" target="_blank" class="card-url">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card6.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card6.title }}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4" *ngIf="card6">
+            <div class="col-md-3" *ngIf="card7">
                 <div class="card cat-card">
-                    <div class="card-body cat-card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="img-url-icon"><i [ngClass]="card6.imageUrl"></i></span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="rebate-text">
-                                    {{ card6.title }}
-                                </h4>
+                    <a [href]="card7.url" *ngIf="!card7.isExtUrl">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card7.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card7.title }}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                    <a [href]="card7.url" *ngIf="card7.isExtUrl" target="_blank" class="card-url">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card7.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card7.title }}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4" *ngIf="card7">
+            <div class="col-md-3" *ngIf="card8">
                 <div class="card cat-card">
-                    <div class="card-body cat-card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="img-url-icon"><i [ngClass]="card7.imageUrl"></i></span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="rebate-text">
-                                    {{ card7.title }}
-                                </h4>
+                    <a [href]="card8.url" *ngIf="!card8.isExtUrl">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card8.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card8.title }}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4" *ngIf="card8">
-                <div class="card cat-card">
-                    <div class="card-body cat-card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="img-url-icon"><i [ngClass]="card8.imageUrl"></i></span>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="rebate-text">
-                                    {{ card8.title }}
-                                </h4>
+                    </a>
+                    <a [href]="card8.url" *ngIf="card8.isExtUrl" target="_blank" class="card-url">
+                        <div class="card-body cat-card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span class="img-url-icon"><i [ngClass]="card8.imageUrl"></i></span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h4 class="rebate-text">
+                                        {{ card8.title }}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

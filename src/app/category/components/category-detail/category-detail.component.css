@@ -46,22 +46,35 @@ h1.rebate-title {
     padding-bottom: 15rem;
 }
 
-.cat-card {
+a.card-url {
+    text-decoration: none;
+    color: var(--midnight);
+}
+
+a.card-url:hover {
+    text-decoration: none;
+    color: var(--gum);
+}
+
+.card.cat-card {
     max-width: 23rem;
+    margin: 0.5rem 0;
 }
 
 .cat-card-body {
     /*padding: 2rem 3rem;*/
-    font-size: 1.5rem;
+    /*font-size: 1.5rem;*/
 }
 
 h4.rebate-text {
     font-family: var(--sans-serif);
+    font-size: 1.2rem;
+    vertical-align: middle;
 }
 
 .img-url-icon > i {
     color: var(--gum);
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: inline-block;
     padding-top: 0.5rem;
 }
@@ -107,4 +120,20 @@ h4.rebate-text {
     white-space: pre-wrap;
     max-width: 300px;
     line-height: 2.2rem;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    /*h4.rebate-text {*/
+    /*    font-family: var(--sans-serif);*/
+    /*    font-size: 1rem;*/
+    /*    vertical-align: middle;*/
+    /*}*/
+
+    /*.img-url-icon > i {*/
+    /*    color: var(--gum);*/
+    /*    font-size: 2rem;*/
+    /*    display: inline-block;*/
+    /*    padding-top: 0.5rem;*/
+    /*}*/
 }
