@@ -19,7 +19,7 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "src/tsconfig.app.json",
                         "assets": [
-                            "src/favicon.ico",
+                            "src/assets/outputDir/favicon.ico",
                             "src/assets",
                             "src/assets/fonts/gotham/GothamOffice-Bold.ttf",
                             "src/assets/fonts/gotham/GothamOffice-BoldItalic.ttf",
@@ -99,7 +99,7 @@
                             "./node_modules/bootstrap/dist/js/bootstrap.min.js"
                         ],
                         "assets": [
-                            "src/favicon.ico",
+                            "src/assets/outputDir/favicon.ico",
                             "src/assets",
                             "src/assets/fonts/gotham/GothamOffice-Bold.ttf",
                             "src/assets/fonts/gotham/GothamOffice-BoldItalic.ttf",
