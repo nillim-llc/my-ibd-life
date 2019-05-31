@@ -1,4 +1,10 @@
+html {
+    width: 0;
+    height: 0;
+}
+
 nav.navbar {
+    min-width: 100%;
     background-color: var(--light);
     -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.03);
     -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.03);
@@ -30,4 +36,16 @@ i.fal {
 
 #contact {
     margin-top: 0.5rem;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .navbar-nav > a.nav-item.nav-link {
+        margin: 0.75rem 0.5rem;
+        font-size: 1rem;
+        color: var(--dark);
+        font-weight: 600;
+        max-width: 200px;
+        line-height: 1.5rem;
+    }
 }

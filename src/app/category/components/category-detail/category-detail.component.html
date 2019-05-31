@@ -17,7 +17,7 @@
 <div class="page-cards-section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 col-md-3" *ngFor="let page of pages$ | async">
+            <div class="col-sm-12 col-md-3" style="margin-bottom:1rem;" *ngFor="let page of pages$ | async">
                 <a [routerLink]="['/', page.category, page.url]">
                     <figure class="page-caption">
                         <img class="page"

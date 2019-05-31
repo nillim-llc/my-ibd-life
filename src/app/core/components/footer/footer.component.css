@@ -10,7 +10,12 @@
 }
 
 img.logo {
-    max-width: 450px;
+    padding-top: 2.5rem;
+}
+
+.connect {
+    font-size: 24px;
+    padding-right: 2rem;
 }
 
 .row.footer-bottom {
@@ -30,4 +35,15 @@ a.social > i:hover {
 p.copy {
     color: var(--cloud);
     font-family: var(--sans-serif);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .row.footer-top {
+        padding: 1rem;
+    }
+    .connect {
+        display: block;
+        padding-bottom: 1rem;
+    }
 }
