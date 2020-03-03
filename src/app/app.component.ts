@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { NavigationEnd, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -9,7 +8,6 @@ import { Observable } from 'rxjs';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    textSections$: Observable<object[]>;
 
     constructor(
         private afs: AngularFirestore,
@@ -25,6 +23,6 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.textSections$ = this.afs.collection('textSections').valueChanges();
+
     }
 }
