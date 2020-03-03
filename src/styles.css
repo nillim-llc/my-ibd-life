@@ -93,6 +93,7 @@
 
 body {
     background-color: var(--cloud);
+    box-sizing: border-box;
 }
 
 p {
@@ -143,5 +144,9 @@ p {
     color: var(--midnight);
     border-bottom: 1px solid var(--ash);
     text-decoration: none;
+}
+
+.margin-bottom-lg {
+    margin-bottom: 10rem;
 }
 

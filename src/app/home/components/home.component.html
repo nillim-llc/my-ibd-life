@@ -84,8 +84,8 @@
         </div>
 
         <div class="row mt-5">
-            <div class="col-md-7" *ngIf="category1">
-                <a [routerLink]="['/categories/', category1.slug]">
+            <div class="col-md-6 col-sm-12" *ngIf="category1">
+                <a [routerLink]="[category1.slug]">
                     <figure class="caption">
                         <img class="category"
                              [src]="category1.homepageImageUrl"
@@ -97,7 +97,7 @@
                                         <i [ngClass]="category1.imageUrl"></i>
                                     </div>
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-9 offset-sm-1">
                                     <div class="cat-name">
                                         {{ category1.name }}
                                     </div>
@@ -107,8 +107,8 @@
                     </figure>
                 </a>
             </div>
-            <div class="col-md-5" *ngIf="category2">
-                <a [routerLink]="['/categories/', category2.slug]">
+            <div class="col-md-6 col-sm-12" *ngIf="category2">
+                <a [routerLink]="[category2.slug]">
                     <figure class="caption-right">
                         <img class="category"
                              [src]="category2.homepageImageUrl"
@@ -120,7 +120,7 @@
                                         <i [ngClass]="category2.imageUrl"></i>
                                     </div>
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-9 offset-sm-1">
                                     <div class="cat-name-right">
                                         {{ category2.name }}
                                     </div>

@@ -3,3 +3,16 @@ input, textarea {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
 }
+
+.card.contact-card {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .card.contact-card {
+        margin: 4rem 0;
+    }
+}
+

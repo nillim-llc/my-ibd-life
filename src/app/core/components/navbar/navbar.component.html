@@ -1,20 +1,21 @@
 <!-- * NAVBAR * -->
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="nav navbar-nav navbar mx-auto">
-        <a class="navbar-brand" [routerLink]="['/']">
-            <img [src]="logo"
-                 alt="myibd life logo"
-                 class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link"
-                   *ngFor="let cats of categories"
-                   [routerLink]="['categories', cats.slug]">
+<div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="nav navbar-nav navbar mx-auto">
+            <a class="navbar-brand" [routerLink]="['/']">
+                <img [src]="logo"
+                     alt="myibd life logo"
+                     class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link"
+                       *ngFor="let cats of categories"
+                       [routerLink]="[cats.slug]">
                     <span class="row">
                         <div class="col-sm-3">
                         <i [ngClass]="cats.imageUrl"></i>
@@ -25,20 +26,21 @@
                         </h5>
                     </div>
                     </span>
-                </a>
-                <a [routerLink]="['/contact']" class="nav-item nav-link">
+                    </a>
+                    <a [routerLink]="['/contact']" class="nav-item nav-link">
                     <span class="row">
                         <span class="col-sm-3">
                             <i class="fal fa-comment-alt"></i>
                         </span>
-                        <span class="col-sm-9" id="contact">
+                        <span class="col-sm-9 mt-sm-2">
                             <h5 class="cat">
                                 Contact Us
                             </h5>
                         </span>
                     </span>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>
