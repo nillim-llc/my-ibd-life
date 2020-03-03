@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CategoryRoutingModule } from '../category/category-routing.module';
 import { PageDetailComponent } from './components/page-detail/page-detail.component';
 import { PageComponent } from './components/page.component';
 
@@ -18,7 +19,8 @@ const pageRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forChild(pageRoutes)
+        RouterModule.forChild(pageRoutes),
+        CategoryRoutingModule,
     ],
     exports: [
         RouterModule

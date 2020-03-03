@@ -7,10 +7,12 @@ import { PageModule } from './page/page.module';
 
 
 const routes: Routes = [
+    { path: '**', redirectTo: '', pathMatch: 'full' },
     // { path: 'page', loadChildren: './page/page.module#PageModule' },
     // { path: 'home', loadChildren: './home/home.module#HomeModule' },
     // { path: 'category', loadChildren: './category/category.module#CategoryModule' },
     // { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
+
 ];
 
 @NgModule({

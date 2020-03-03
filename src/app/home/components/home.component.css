@@ -66,9 +66,11 @@ p.section-four-text-bottom {
 .ibd-cat {
     background-color: var(--gum);
     margin: 0 0 18px 0;
+    /*width: 100%;*/
+    /*height: 300px;*/
     width: 100%;
-    height: 300px;
-    min-height: 300px;
+    height: 100%;
+    /*min-height: 300px;*/
     border-radius: 2px;
     display: inline-block;
     position: relative;
@@ -86,8 +88,8 @@ p.section-four-text-bottom {
 
 .caption > img.category, .caption-right > img.category {
     display: block;
-    width: 450px;
-    height: 300px;
+    width: 100%;
+    height: auto;
 }
 
 .caption:after, .caption-right:after {
@@ -96,8 +98,10 @@ p.section-four-text-bottom {
     display: block;
     left: 0;
     top: 0;
-    width: 450px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    /*width: 450px;*/
+    /*height: 300px;*/
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, var(--gum-rgb) 100%) repeat 0 0;
     z-index: 1;
 }
@@ -108,8 +112,10 @@ p.section-four-text-bottom {
     display: block;
     left: 0;
     top: 0;
-    width: 450px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    /*width: 450px;*/
+    /*height: 300px;*/
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, var(--water-rgb) 100%) repeat 0 0;
     z-index: 1;
 }
@@ -119,7 +125,8 @@ p.section-four-text-bottom {
     font-size: 2rem;
     display: block;
     position: absolute;
-    width: 450px;
+    width: 80%;
+    /*width: 450px;*/
     color: #fff;
     left: 0;
     bottom: 0;
@@ -131,7 +138,7 @@ p.section-four-text-bottom {
 
 
 .icon {
-    padding-top: 0.5rem;
+    padding-top: 0.65rem;
 }
 
 .icon > i {
@@ -149,13 +156,13 @@ p.section-four-text-bottom {
 
 
 /* Mobile */
-@media (max-width: 769px) {
+@media (max-width: 767px) {
     .ibd-cat {
         background-color: var(--gum);
         margin: 0 0 18px 0;
         width: 100%;
-        height: 150px;
-        min-height: 150px;
+        height: 100%;
+        /*min-height: 150px;*/
         border-radius: 2px;
         display: inline-block;
         position: relative;
@@ -173,8 +180,10 @@ p.section-four-text-bottom {
 
     .caption > img.category, .caption-right > img.category {
         display: block;
-        width: 300px;
-        height: 200px;
+        /*width: 300px;*/
+        /*height: 200px;*/
+        width: 100%;
+        height: 100%;
     }
 
     .caption:after, .caption-right:after {
@@ -183,8 +192,10 @@ p.section-four-text-bottom {
         display: block;
         left: 0;
         top: 0;
-        width: 300px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
+        /*width: 300px;*/
+        /*height: 200px;*/
         background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, var(--gum-rgb) 100%) repeat 0 0;
         z-index: 1;
     }
@@ -195,8 +206,10 @@ p.section-four-text-bottom {
         display: block;
         left: 0;
         top: 0;
-        width: 300px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
+        /*width: 300px;*/
+        /*height: 200px;*/
         background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, var(--water-rgb) 100%) repeat 0 0;
         z-index: 1;
     }
@@ -216,6 +229,9 @@ p.section-four-text-bottom {
         box-sizing: border-box;
     }
 
+    footer.navbar-fixed-bottom {
+        margin-top: 0;
+    }
 
 }
 
