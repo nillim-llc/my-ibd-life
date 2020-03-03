@@ -15,9 +15,9 @@
 
 <!-- * PAGES * -->
 <div class="page-cards-section" [class.margin-bottom-lg]="category && !category.showCards">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-3 col-lg-3"
+            <div class="col-sm-12 col-md-4 col-lg-3"
                  style="margin-bottom:1rem;"
                  *ngFor="let page of pages$ | async">
                 <div class="page-cards">
@@ -37,14 +37,14 @@
 
 <!-- * CARDS * -->
 <div class="rebate-card-section" *ngIf="category && category.showCards">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <h1 class="rebate-title">Rebate Programs</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-12" *ngIf="card1">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngIf="card1">
                 <div class="card cat-card">
                     <a [href]="card1.url" *ngIf="!card1.isExtUrl">
                         <div class="card-body cat-card-body">
@@ -76,7 +76,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12" *ngIf="card2">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngIf="card2">
                 <div class="card cat-card">
                     <a [href]="card2.url" *ngIf="!card2.isExtUrl">
                         <div class="card-body cat-card-body">
@@ -108,7 +108,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12" *ngIf="card3">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngIf="card3">
                 <div class="card cat-card">
                     <a [href]="card3.url" *ngIf="!card3.isExtUrl">
                         <div class="card-body cat-card-body">
@@ -140,7 +140,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12" *ngIf="card4">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngIf="card4">
                 <div class="card cat-card">
                     <a [href]="card4.url" *ngIf="!card4.isExtUrl">
                         <div class="card-body cat-card-body">
@@ -172,10 +172,10 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <!-- * Second Row of Rebastes * -->
-            <div class="col-md-3 col-sm-12" *ngIf="card5">
+
+
+            <!-- * Second Row of Rebates * -->
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngIf="card5">
                 <div class="card cat-card">
                     <a [href]="card5.url" *ngIf="!card5.isExtUrl">
                         <div class="card-body cat-card-body">
@@ -207,7 +207,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12" *ngIf="card6">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngIf="card6">
                 <div class="card cat-card">
                     <a [href]="card6.url" *ngIf="!card6.isExtUrl">
                         <div class="card-body cat-card-body">
@@ -239,7 +239,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12" *ngIf="card7">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngIf="card7">
                 <div class="card cat-card">
                     <a [href]="card7.url" *ngIf="!card7.isExtUrl">
                         <div class="card-body cat-card-body">
@@ -271,7 +271,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12" *ngIf="card8">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngIf="card8">
                 <div class="card cat-card">
                     <a [href]="card8.url" *ngIf="!card8.isExtUrl">
                         <div class="card-body cat-card-body">
